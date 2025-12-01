@@ -67,6 +67,4 @@ return {
     },
 
     { "ThePrimeagen/vim-be-good" },
-
-    { 'brenoprata10/nvim-highlight-colors' },
 }
