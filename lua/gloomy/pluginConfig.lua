@@ -92,9 +92,6 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
--- Fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-
 -- Lualine
 require('lualine').setup {
   options = {
