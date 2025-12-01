@@ -28,8 +28,6 @@ return {
                 end,
             },
             'saghen/blink.cmp',
-            -- { "folke/neodev.nvim", enabled = false }, -- make sure to uninstall or disable neodev.nvim
-
         },
         config = function()
             vim.lsp.enable('lua_ls')
