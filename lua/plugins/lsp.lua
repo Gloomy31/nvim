@@ -1,38 +1,38 @@
 return {
     {
-        {
-            "mason-org/mason.nvim",
-            opts = {}
-        },
         "neovim/nvim-lspconfig",
         dependencies = {
-            {
-                "folke/lazydev.nvim",
-                ft = "lua", -- only load on lua files
-                opts = {
-                    library = {
-                        -- See the configuration section for more details
-                        -- Load luvit types when the `vim.uv` word is found
-                        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-                    },
-                },
-            },
-            { -- optional cmp completion source for require statements and module annotations
-                "hrsh7th/nvim-cmp",
-                opts = function(_, opts)
-                    opts.sources = opts.sources or {}
-                    table.insert(opts.sources, {
-                        name = "lazydev",
-                        group_index = 0, -- set group index to 0 to skip loading LuaLS completions
-                    })
-                end,
-            },
-            'saghen/blink.cmp',
+            "saghen/blink.cmp",
+            "j-hui/fidget.nvim",
+            "mason-org/mason.nvim",
+            "mason-org/mason-lspconfig.nvim",
         },
+
         config = function()
-            vim.lsp.enable('lua_ls')
-            vim.lsp.enable('clangd')
+            require("fidget").setup()
+            require("mason").setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "clangd",
+                    "html",
+                    "cssls",
+                    "ts_ls",
+                    "jsonls",
+                    "yamlls",
+                    "pylsp",
+                    "rust_analyzer",
+                    "cmake",
+                    "bashls",
+                },
+            })
         end,
-        { 'mfussenegger/nvim-jdtls' },
-    }
+    },
+
+    {
+        'mfussenegger/nvim-jdtls',
+        config = function()
+            vim.lsp.enable('jdtls')
+        end
+    },
 }

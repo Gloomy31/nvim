@@ -73,3 +73,6 @@ vim.keymap.set("n", "<leader>c0", '0v$:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
 vim.keymap.set("n", "<leader>cb", '{v}:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
 -- ...in file
 vim.keymap.set("n", "<leader>cf", 'ggVG:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
+
+-- Diagnostic remaps
+vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end)
