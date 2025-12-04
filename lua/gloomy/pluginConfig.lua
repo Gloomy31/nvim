@@ -1,6 +1,7 @@
 -- Colorscheme
 vim.cmd[[colorscheme tokyonight-moon]]
 
+
 -- Treesitter
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all" (the listed parsers MUST always be installed)
@@ -70,27 +71,9 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 
 
--- Harpoon
-local harpoon = require("harpoon")
-
--- REQUIRED
-harpoon:setup()
--- REQUIRED
-
-vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-
---vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
---vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
---vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
---vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
-
--- Toggle previous & next buffers stored within Harpoon list
---vim.keymap.set("n", "<C-S-p>", function() harpoon:list():prev() end)
---vim.keymap.set("n", "<C-S-n>", function() harpoon:list():next() end)
-
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
 
 -- Lualine
 require('lualine').setup {

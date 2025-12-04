@@ -71,9 +71,6 @@ NVIM_APPNAME=Gloomy31/nvim/ nvim
 ### markdown-and-latex
 
 + [brianhuster/live-preview.nvim](https://dotfyle.com/plugins/brianhuster/live-preview.nvim)
-### marks
-
-+ [ThePrimeagen/harpoon](https://dotfyle.com/plugins/ThePrimeagen/harpoon)
 ### media
 
 + [3rd/image.nvim](https://dotfyle.com/plugins/3rd/image.nvim)
