@@ -1,5 +1,5 @@
--- Colorscheme
-vim.cmd[[colorscheme tokyonight-moon]]
+-- LazyVim
+vim.g.lazyvim_check_order = false
 
 
 -- Treesitter

@@ -1,0 +1,1 @@
+/home/gloomy/.config/omarchy/current/theme/neovim.lua
