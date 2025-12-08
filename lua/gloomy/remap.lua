@@ -36,6 +36,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Resize split windows using arrow keys by pressing:
 -- CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
+vim.keymap.del("n", "<c-up>")
 vim.keymap.set("", "<c-up>", "<c-w>+")
 vim.keymap.set("", "<c-down>", "<c-w>-")
 vim.keymap.set("", "<c-left>", "<c-w>>")
