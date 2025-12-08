@@ -8,12 +8,16 @@ return {
             "mason-org/mason-lspconfig.nvim",
         },
 
+        opts = {
+            vim.lsp.enable('lua_ls')
+        },
+
         config = function()
             require("fidget").setup()
             require("mason").setup()
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "lua_ls",
+                    -- "lua_ls",
                     "clangd",
                     "html",
                     "cssls",
