@@ -1,6 +1,10 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("", "<F2>", vim.cmd.noh)
+vim.keymap.set({ "n", "s" }, "<esc>", function()
+    vim.cmd("noh")
+    LazyVim.cmp.actions.snippet_stop()
+    return "<esc>"
+end, { expr = true })
 vim.keymap.set("n", "<F4>", ":vert term<CR>")
 vim.keymap.set("t", "<F4>", "<C-d>")
 
@@ -29,8 +33,6 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- vim.keymap.set("n", "<leader>d", "\"_d")
 -- vim.keymap.set("v", "<leader>d", "\"_d")
-
-vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
@@ -76,3 +78,6 @@ vim.keymap.set("n", "<leader>cf", 'ggVG:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
 
 -- Diagnostic remaps
 vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end)
+
+-- Easier quitting
+vim.keymap.set("n", "<leader>qq", vim.cmd.qa)
