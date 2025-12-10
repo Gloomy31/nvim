@@ -81,3 +81,7 @@ vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end)
 
 -- Easier quitting
 vim.keymap.set("n", "<leader>qq", vim.cmd.qa)
+
+-- remap gj and gk so I can still go up and down a full line without having to reach for the 1 key
+vim.keymap.set("", "gj", "j")
+vim.keymap.set("", "gk", "k")
