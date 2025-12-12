@@ -136,12 +136,12 @@ require("neo-tree").setup({
         }
     },
 })
-vim.keymap.set("n", "<F3>", ":Neotree toggle=true<CR>")
+vim.keymap.set("n", "<leader>e", ":Neotree toggle=true<CR>")
 
 
 -- mini.nvim
     -- Text editing
--- require('mini.ai').setup()
+require('mini.ai').setup()
 -- require('mini.keymap').setup()
 require('mini.operators').setup()
 require('mini.pairs').setup()
