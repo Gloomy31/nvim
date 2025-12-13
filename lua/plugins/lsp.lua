@@ -22,7 +22,6 @@ return {
                     "yamlls",
                     "pylsp",
                     "rust_analyzer",
-                    "cmake",
                     "bashls",
                 },
             })
