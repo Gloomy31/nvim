@@ -35,23 +35,6 @@ return {
     },
 
     {
-        'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',
-        keys = {
-            { "<leader>tp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
-            { "<leader>tP", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Delete Non-Pinned Buffers" },
-            { "<leader>tl", "<Cmd>BufferLineCloseRight<CR>", desc = "Delete Buffers to the Right" },
-            { "<leader>th", "<Cmd>BufferLineCloseLeft<CR>", desc = "Delete Buffers to the Left" },
-            { "<S-tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-            { "<tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-            { "H", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-            { "L", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-            { "<leader>h", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer prev" },
-            { "<leader>l", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer next" },
-        }
-
-    },
-
-    {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         ---@module "ibl"
