@@ -8,7 +8,7 @@ end, { expr = true })
 vim.keymap.set("n", "<F4>", ":vert term<CR>")
 vim.keymap.set("t", "<F4>", "<C-d>")
 
-vim.keymap.set("n", "<leader>w", vim.cmd.w)
+vim.keymap.set("n", "<leader>w", vim.cmd.w, { desc = "write current file" })
 
 vim.keymap.set("", "0", "^")
 vim.keymap.set("", "<leader>0", "0")
@@ -48,8 +48,8 @@ vim.keymap.set("", "<C-k>", "<C-W>k")
 vim.keymap.set("", "<C-h>", "<C-W>h")
 vim.keymap.set("", "<C-l>", "<C-W>l")
 
-vim.keymap.set("", "<leader>tc", function() vim.cmd.bdelete {bang = true} end)
-vim.keymap.set("", "<leader>tn", ":e ./buffer<CR>")
+vim.keymap.set("", "<leader>bd", function() vim.cmd.bdelete {bang = true} end, { desc = "Close Current Buffer" })
+vim.keymap.set("", "<leader>bn", vim.cmd.enew, { desc = "Create New Buffer" })
 
 vim.keymap.set("", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>")
 
@@ -76,7 +76,7 @@ vim.keymap.set("n", "<leader>cb", '{v}:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
 vim.keymap.set("n", "<leader>cf", 'ggVG:<BS><BS><BS><BS><BS>%s/\\%V./&/g')
 
 -- Diagnostic remaps
-vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end)
+vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, { desc = "Check Diagnostics for Current Line" })
 
 -- Easier quitting
 vim.keymap.set("n", "<leader>qq", vim.cmd.qa)
