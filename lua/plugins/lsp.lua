@@ -15,6 +15,7 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "clangd",
+                    "neocmake",
                     "html",
                     "cssls",
                     "ts_ls",
