@@ -5,7 +5,7 @@ vim.keymap.set({ "n", "s" }, "<esc>", function()
     LazyVim.cmp.actions.snippet_stop()
     return "<esc>"
 end, { expr = true })
-vim.keymap.set("n", "<F4>", ":vert term<CR>")
+vim.keymap.set("n", "<F4>", ":15split | term<CR>")
 vim.keymap.set("t", "<F4>", "<C-d>")
 
 vim.keymap.set("n", "<leader>w", vim.cmd.w, { desc = "write current file" })
