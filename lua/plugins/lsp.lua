@@ -24,6 +24,7 @@ return {
                     "pylsp",
                     "rust_analyzer",
                     "bashls",
+                    "csharp_ls"
                 },
             })
             -- vim.lsp.enable('lua_ls')
