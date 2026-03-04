@@ -43,6 +43,4 @@ return {
     },
 
     { "ThePrimeagen/vim-be-good" },
-
-    { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
 }
