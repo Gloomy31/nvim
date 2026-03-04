@@ -187,18 +187,3 @@ vim.cmd([[
 ]])
 
 vim.keymap.set("n", "<leader>W", vim.cmd.SudaWrite)
-
-
--- firenvim
-vim.g.firenvim_config = {
-    localSettings = {
-        [".*"] = {
-            cmdline = "neovim",
-            selector = 'textarea:not([readonly], [aria-readonly]), div[role="textbox"]',
-        },
-        ["https://docs\\.google\\.com/*"] = {
-            takeover = 'never',
-            priority = 1,
-        },
-    },
-}
