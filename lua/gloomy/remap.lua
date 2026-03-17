@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 
 vim.keymap.set({ "n", "s" }, "<esc>", function()
     vim.cmd("noh")
-    LazyVim.cmp.actions.snippet_stop()
     return "<esc>"
 end, { expr = true })
 vim.keymap.set("n", "<leader>t", ":15split | term<CR>")
